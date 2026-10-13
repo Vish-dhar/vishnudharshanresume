@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .show{
+            color: red;
+        }
+        .hide{
+            color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <button id="show">
+        Show
+    </button >
+    <label id="showlabel">
+       
+    </label>
+    <script>
+        var boolean;
+        const button= document.getElementById('show');
+        const label = document.getElementById('showlabel');
+        button.addEventListener('click', function(){
+            boolean = !boolean;
+            label.textContent = `${boolean?"Label is Visible":"Label is not Visible"}`;
+            label.className = `${boolean? "show":"hide"}`
+        }
+        )
+    </script>
+</body>
+</html>
+
+//namba resume la button kuduthu atha click pana pic varanum click eduthaa pic poidanum athuku oru button and next 
+        //light theme dark theme varanum athuku oru button so resume vanthu antha button click pana light or dark theme ku change aganum
+        //resume ethana vati download pani irukanga nu show pananum 
+        // , age click pana increase aganum age , boolean value  true naa dark color false na light color varanum today afternoon work  
+        

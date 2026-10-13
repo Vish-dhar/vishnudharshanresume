@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Foodie Fiesta - Order Form</title>
+
+    <style>
+        body {
+            background-color: #F4E4D4;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 25px;
+        }
+
+        .container {
+            background-color: #FFF3E3;
+            width: 90%;
+            max-width: 650px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 20px;
+            border: 3px solid #D68B58;
+        }
+
+        .header {
+            background-color: #963F27;
+            color: #FFE3A3;
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        h1 {
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #FFF0D5;
+        }
+
+        h2 {
+            color: #963F27;
+            border-bottom: 2px solid #D68B58;
+            padding-bottom: 8px;
+        }
+
+        label {
+            color: #51412F;
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 7px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 11px;
+            border: 2px solid #D9B99B;
+            border-radius: 8px;
+            background-color: #FFFCF5;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #65834A;
+            background-color: #F4F8E9;
+        }
+
+        .food-options {
+            background-color: #E5EBCF;
+            padding: 15px;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+
+        .food-options label {
+            display: inline-block;
+            margin: 8px 0;
+            color: #36532E;
+        }
+
+        .food-options input {
+            width: auto;
+            margin-right: 8px;
+        }
+
+        .food-options input[type="number"] {
+            width: 75px;
+            margin-left: 8px;
+        }
+
+        .delivery {
+            background-color: #F9E0B5;
+            padding: 15px;
+            border-radius: 12px;
+            margin-top: 15px;
+        }
+
+        .delivery label {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        .delivery input {
+            width: auto;
+        }
+
+        .submit-button {
+            background-color: #65834A;
+            color: white;
+            border: none;
+            padding: 14px;
+            width: 100%;
+            font-size: 17px;
+            font-weight: bold;
+            border-radius: 10px;
+            margin-top: 22px;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background-color: #42632F;
+        }
+
+        .reset-button {
+            background-color: #D68B58;
+            color: #402A1D;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            font-size: 15px;
+            border-radius: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .reset-button:hover {
+            background-color: #C77743;
+            color: white;
+        }
+
+        .footer {
+            text-align: center;
+            color: #79533B;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 500px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                width: auto;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h1> Foodie Fiesta</h1>
+            <p class="subtitle">Fresh Food, Happy Mood!</p>
+            <p>Register and place your delicious order</p>
+        </div>
+
+        <form action="#" method="get">
+
+            <h2>Customer Details</h2>
+
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name"
+                   placeholder="Enter your full name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email"
+                   placeholder="example@gmail.com" required>
+
+            <label for="phone">Mobile Number</label>
+            <input type="tel" id="phone" name="phone"
+                   placeholder="Enter your mobile number"
+                   pattern="[0-9]{10}" maxlength="10" required>
+
+            <h2>Choose Your Food</h2>
+
+            <label for="category">Food Category</label>
+            <select id="category" name="category" required>
+                <option value="">-- Select a category --</option>
+                <option>South Indian</option>
+                <option>North Indian</option>
+                <option>Chinese</option>
+                <option>Fast Food</option>
+                <option>Desserts</option>
+            </select>
+
+            <div class="food-options">
+
+                <label>Select Your Favourite Dishes</label>
+
+                <label>
+                    <input type="checkbox" name="food" value="Dosa">
+                    Masala Dosa
+                </label>
+                <br>
+
+                <label>
+                    <input type="checkbox" name="food" value="Biryani">
+                    Chicken Biryani
+                </label>
+                <br>
+
+                <label>
+                    <input type="checkbox" name="food" value="Paneer">
+                    Paneer Tikka
+                </label>
+                <br>
+
+                <label>
+                    <input type="checkbox" name="food" value="Noodles">
+                    Veg Noodles
+                </label>
+                <br>
+
+                <label>
+                    <input type="checkbox" name="food" value="IceCream">
+                    Ice Cream
+                </label>
+
+            </div>
+
+            <label for="quantity">Number of Food Items</label>
+            <input type="number" id="quantity" name="quantity"
+                   min="1" max="20" value="1" required>
+
+            <label for="spice">Spice Level</label>
+            <select id="spice" name="spice">
+                <option>Mild</option>
+                <option>Medium</option>
+                <option>Spicy</option>
+                <option>Extra Spicy</option>
+            </select>
+
+            <h2>Order Preferences</h2>
+
+            <div class="delivery">
+
+                <label>Order Type:</label>
+                <br>
+
+                <label>
+                    <input type="radio" name="orderType"
+                           value="Delivery" required>
+                    Home Delivery
+                </label>
+
+                <label>
+                    <input type="radio" name="orderType"
+                           value="Pickup">
+                    Takeaway
+                </label>
+
+            </div>
+
+            <label for="date">Preferred Order Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Preferred Order Time</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="address">Delivery Address</label>
+            <textarea id="address" name="address" rows="3"
+                      placeholder="Enter your full address"></textarea>
+
+            <label for="payment">Payment Method</label>
+            <select id="payment" name="payment" required>
+                <option value="">-- Choose payment method --</option>
+                <option>Cash on Delivery</option>
+                <option>UPI</option>
+                <option>Debit/Credit Card</option>
+            </select>
+
+            <label for="instructions">Special Instructions</label>
+            <textarea id="instructions" name="instructions" rows="3"
+                      placeholder="Less oil, extra chutney, etc."></textarea>
+
+            <button type="submit" class="submit-button">
+                Place My Order
+            </button>
+
+            <button type="reset" class="reset-button">
+                Clear Form
+            </button>
+
+        </form>
+
+        <div class="footer">
+            <p>Thank you for choosing Foodie Fiesta!</p>
+            <p>Good Food • Great Taste • Happy Moments</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
