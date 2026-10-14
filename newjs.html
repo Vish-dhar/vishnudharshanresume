@@ -34,8 +34,13 @@
 </body>
 </html>
 
-//namba resume la button kuduthu atha click pana pic varanum click eduthaa pic poidanum athuku oru button and next 
-        //light theme dark theme varanum athuku oru button so resume vanthu antha button click pana light or dark theme ku change aganum
-        //resume ethana vati download pani irukanga nu show pananum 
-        // , age click pana increase aganum age , boolean value  true naa dark color false na light color varanum today afternoon work  
-        
+const students = [
+        {name: "John", age: 20, downloads: 5},
+        {name: "Jane", age: 22, downloads: 3},
+        {name: "Mike", age: 21, downloads: 7}];
+        const topStudentsAge = students.filter(s => s.age > 20)
+        .map(s => s.name)
+        .join(", ");
+        console.log(topStudentsAge); 
+        console.log(students.length);
+    
